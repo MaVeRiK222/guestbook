@@ -3,4 +3,4 @@
 
 Vue и Laravel запускаются отдельно (npm run dev и php artisan serve).
 
-БД на mysql подключалась через openserver.
+БД в папке sqldb, подключалась через openserver.
