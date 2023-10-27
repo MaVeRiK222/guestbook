@@ -101,7 +101,7 @@ export default {
           let currentTime = new Date().getTime()
           let unix_time = +new Date(time)
           let diff = new Date(currentTime - unix_time)
-          return (diff.getHours >= 2) && (diff.getHours >= 0) ? false : true
+          return (diff.getDay > 0) && (diff.getHours >= 2) && (diff.getHours >= 0) ? false : true
         },
         paginatedData(){
           const start = this.pageNumber * this.size,
