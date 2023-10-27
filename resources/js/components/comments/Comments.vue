@@ -98,10 +98,11 @@ export default {
     },
     methods: {
         getDiff(time){
-          let currentTime = new Date().getTime()
-          let unix_time = +new Date(time)
-          let diff = new Date(currentTime - unix_time)
-          return (diff.getDay > 0) && (diff.getHours >= 2) && (diff.getHours >= 0) ? false : true
+          let currentTime = new Date()
+          let new_time = new Date(time)
+          let diff = (currentTime - new_time) / 1000 / 60 / 60
+          console.log(diff)
+          return diff >= 2 ? false:  true
         },
         paginatedData(){
           const start = this.pageNumber * this.size,
