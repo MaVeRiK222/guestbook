@@ -11,11 +11,10 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            #Так надо
             $table->id();
             $table->string("login");
             $table->string("password");
-            $table->bollean('is_admin');
+            $table->boolean('is_admin');
 
         });
     }
